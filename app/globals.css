@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand:  #2C3E50;
+  --color-accent: #7F8C8D;
+  --color-cta:    #E8A87C;
+  --color-bg:     #F8F6F3;
+  --color-ink:    #2C2C2C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #F8F6F3;
+  --foreground: #2C2C2C;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Article prose styles */
+.article-prose h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.article-prose h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2C3E50;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.article-prose p {
+  line-height: 1.75;
+  color: rgba(44,44,44,0.85);
+  margin-bottom: 1rem;
+}
+.article-prose ul {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+.article-prose ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.75;
+  color: rgba(44,44,44,0.85);
+  margin-bottom: 0.4rem;
+}
+.article-prose ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #E8A87C;
+  font-size: 0.85rem;
+}
+.article-prose ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.article-prose ol li {
+  line-height: 1.75;
+  color: rgba(44,44,44,0.85);
+  margin-bottom: 0.4rem;
+  padding-left: 0.25rem;
+}
+.article-prose strong {
+  color: #2C3E50;
+  font-weight: 600;
+}
+.article-prose a {
+  color: #E8A87C;
+  text-decoration: underline;
+}
+.article-prose .info-box {
+  background: white;
+  border: 1px solid rgba(127,140,141,0.25);
+  border-left: 4px solid #2C3E50;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  font-size: 0.92rem;
+}
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.article-prose th {
+  background: #2C3E50;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.article-prose td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(127,140,141,0.15);
+  color: rgba(44,44,44,0.85);
+}
+.article-prose tr:nth-child(even) td {
+  background: #F8F6F3;
 }

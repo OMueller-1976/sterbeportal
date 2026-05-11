@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+
+# Host
+Host: https://www.sterbeportal.de
+
+# Sitemaps
+Sitemap: https://www.sterbeportal.de/sitemap.xml
