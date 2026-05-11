@@ -115,12 +115,11 @@ const sections: { title: string; content: React.ReactNode }[] = [
     content: (
       <div className="text-sm leading-7 text-ink/80 space-y-2">
         <p>
-          Diese Website verwendet den Google Tag Manager (Google Ireland Limited, Gordon House,
-          Barrow Street, Dublin 4, Irland). Google Tag Manager ist ein Tag-Management-System,
-          das es ermöglicht, verschiedene Tracking- und Analyse-Tags zentral zu verwalten.
-          Google Tag Manager selbst erhebt keine personenbezogenen Daten, löst jedoch andere
-          Tags aus, die Daten erheben können. Diese sind in dieser Datenschutzerklärung separat
-          beschrieben.
+          Diese Website verwendet Google Tag Manager (Google Ireland Limited, Gordon House,
+          Barrow Street, Dublin 4, Irland). Google Tag Manager ist ein Tag-Management-System
+          das es ermöglicht, verschiedene Tracking-Tags zentral zu verwalten. Google Tag Manager
+          selbst erhebt keine personenbezogenen Daten, kann jedoch andere Tags auslösen.
+          Aktuell sind keine Analyse- oder Tracking-Tags aktiv.
         </p>
         <p>
           Weitere Informationen:{" "}
