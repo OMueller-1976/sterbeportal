@@ -1,95 +1,111 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum",
-  description: "Impressum von Sterbeportal.de — Angaben gemäß § 5 TMG.",
+  title: "Impressum | sterbeportal.de",
+  robots: { index: false, follow: false },
 };
 
-export default function ImpressumPage() {
-  return (
-    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
-      <h1 className="text-3xl font-bold text-brand">Impressum</h1>
-
-      <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 text-sm text-amber-800">
-        <strong>Hinweis:</strong> Adresse und weitere Pflichtangaben bitte manuell ergänzen.
-      </div>
-
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Angaben gemäß § 5 TMG</h2>
-        <address className="not-italic leading-relaxed">
-          Oliver Müller<br />
-          [Straße und Hausnummer bitte ergänzen]<br />
-          [PLZ und Ort bitte ergänzen]<br />
-          Deutschland
-        </address>
-      </section>
-
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Kontakt</h2>
+const sections = [
+  {
+    title: "Angaben gemäß § 5 TMG",
+    content: (
+      <address className="not-italic text-sm leading-7 text-ink/80">
+        <p className="font-semibold text-brand">OneTitel – Digital &amp; Business Solutions</p>
+        <p>Oliver M. Müller</p>
+        <p>Am Bruchborn 6</p>
+        <p>54570 Kirchweiler</p>
+        <p>Deutschland</p>
+      </address>
+    ),
+  },
+  {
+    title: "Kontakt",
+    content: (
+      <div className="text-sm leading-7 text-ink/80">
         <p>
           E-Mail:{" "}
-          <a href="mailto:info@sterbeportal.de" className="text-cta hover:underline">
-            info@sterbeportal.de
+          <a href="mailto:support@eritaj.de" className="text-cta hover:underline">
+            support@eritaj.de
           </a>
         </p>
-      </section>
-
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Inhaltlich Verantwortlicher</h2>
         <p>
-          Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV:<br />
-          Oliver Müller, [Adresse wie oben]
+          Website:{" "}
+          <a href="https://www.sterbeportal.de" className="text-cta hover:underline">
+            www.sterbeportal.de
+          </a>
         </p>
-      </section>
-
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Hinweis auf verbundene Dienste</h2>
+      </div>
+    ),
+  },
+  {
+    title: "Umsatzsteuer",
+    content: (
+      <div className="text-sm leading-7 text-ink/80">
+        <p>USt-IdNr. gemäß § 27a UStG: DE326064654</p>
+        <p>Steuernummer: 224/5211/4129</p>
+      </div>
+    ),
+  },
+  {
+    title: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+    content: (
+      <address className="not-italic text-sm leading-7 text-ink/80">
+        <p>Oliver M. Müller</p>
+        <p>Am Bruchborn 6, 54570 Kirchweiler, Deutschland</p>
+      </address>
+    ),
+  },
+  {
+    title: "Haftungshinweis",
+    content: (
+      <p className="text-sm leading-7 text-ink/80">
+        sterbeportal.de ist kein Rechtsberatungsdienst. Alle Inhalte dienen der allgemeinen
+        Information und ersetzen keine rechtliche, steuerliche oder medizinische Beratung.
+      </p>
+    ),
+  },
+  {
+    title: "Online-Streitbeilegung",
+    content: (
+      <div className="text-sm leading-7 text-ink/80 space-y-2">
         <p>
-          Diese Website verweist auf das Angebot{" "}
+          Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:{" "}
           <a
-            href="https://eritaj.de"
+            href="https://ec.europa.eu/consumers/odr"
             target="_blank"
             rel="noopener noreferrer"
             className="text-cta hover:underline"
           >
-            eritaj.de
+            https://ec.europa.eu/consumers/odr
           </a>
-          , eine externe Plattform zur digitalen Vorsorge (Testament,
-          Vorsorgevollmacht). Zwischen sterbeportal.de und eritaj.de besteht
-          eine redaktionelle Partnerschaft. Für die Inhalte von eritaj.de ist
-          deren Betreiber verantwortlich.
         </p>
-      </section>
+        <p>
+          Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren
+          vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+      </div>
+    ),
+  },
+];
 
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Haftungsausschluss</h2>
-        <p className="leading-relaxed">
-          Diese Website ist ein kostenloses Informationsangebot und{" "}
-          <strong>ersetzt keine Rechts-, Steuer- oder medizinische Beratung</strong>.
-          Alle Inhalte wurden sorgfältig recherchiert und werden regelmäßig
-          aktualisiert. Dennoch können wir keine Gewähr für Aktualität,
-          Richtigkeit und Vollständigkeit übernehmen.
-        </p>
-        <p className="leading-relaxed">
-          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte
-          auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
-          §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
-          verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
-          überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
-          Tätigkeit hinweisen.
-        </p>
-      </section>
+export default function ImpressumPage() {
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
+      <header className="space-y-1">
+        <h1 className="text-3xl font-bold text-brand">Impressum</h1>
+      </header>
 
-      <section className="space-y-3 text-ink/80">
-        <h2 className="font-semibold text-brand text-lg">Urheberrecht</h2>
-        <p className="leading-relaxed">
-          Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen
-          Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
-          Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-          Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des
-          jeweiligen Autors bzw. Erstellers.
-        </p>
-      </section>
+      <div className="space-y-4">
+        {sections.map((s) => (
+          <div
+            key={s.title}
+            className="rounded-2xl border border-accent/20 bg-white px-6 py-5"
+          >
+            <h2 className="mb-3 text-base font-semibold text-brand">{s.title}</h2>
+            {s.content}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
