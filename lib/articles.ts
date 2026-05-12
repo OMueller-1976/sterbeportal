@@ -277,7 +277,7 @@ export const articles: Article[] = [
     slug: "patientenverfuegung-richtig-erstellen",
     title: "Patientenverfügung richtig erstellen — So legst du deinen letzten Willen fest",
     description:
-      "Was regelt eine Patientenverfügung, welche Formvorschriften gelten und wie setzen Sie sie rechtssicher auf? Wir erklären alles Wichtige.",
+      "Was regelt eine Patientenverfügung, welche Formvorschriften gelten und wie setzen Sie sie Schritt für Schritt auf? Wir erklären alles Wichtige.",
     date: "2026-04-25",
     category: "Vorsorge & Recht",
     image: "/images/patientenverfuegung-ratgeber.png",

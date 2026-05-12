@@ -8,7 +8,7 @@ export default function CTABanner() {
         Vorsorgevollmacht &amp; Testament digital regeln
       </h2>
       <p className="text-ink/70 mb-6 max-w-xl mx-auto">
-        Sichern Sie Ihren Willen für den Ernstfall – einfach, rechtssicher und
+        Sichern Sie Ihren Willen für den Ernstfall – einfach, unkompliziert und
         von zu Hause aus.
       </p>
       <a
