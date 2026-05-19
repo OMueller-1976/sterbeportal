@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   description:
     "Informationen zu Bestattungsvorsorge, Sterbegeld, Trauerbegleitung und mehr. Umfassender Ratgeber für den Ernstfall.",
   metadataBase: new URL("https://www.sterbeportal.de"),
+  alternates: {
+    canonical: 'https://www.sterbeportal.de',
+  },
   openGraph: {
     siteName: "sterbeportal.de",
     locale: "de_DE",
