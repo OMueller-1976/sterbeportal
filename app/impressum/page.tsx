@@ -86,6 +86,18 @@ const sections = [
       </div>
     ),
   },
+  {
+    title: "Hinweis zur Nutzung von Künstlicher Intelligenz",
+    content: (
+      <p className="text-sm leading-7 text-ink/80">
+        Einzelne Inhalte dieser Website werden unter Einsatz von KI-Systemen erstellt oder
+        unterstützt. Entsprechend Art. 50 der EU-Verordnung 2024/1689 (KI-VO) kennzeichnen
+        wir KI-generierte Beiträge, sofern keine redaktionelle Prüfung durch eine namentlich
+        benannte Person erfolgt ist. Bei redaktionell geprüften Beiträgen ist die
+        verantwortliche Person jeweils im Beitrag angegeben.
+      </p>
+    ),
+  },
 ];
 
 export default function ImpressumPage() {

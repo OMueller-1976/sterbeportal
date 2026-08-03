@@ -100,6 +100,11 @@ export default async function ArticlePage(props: PageProps<"/ratgeber/[slug]">) 
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
 
+      {/* KI-Hinweis gemäß Art. 50 Abs. 4 KI-VO */}
+      <div className="rounded-lg border border-accent/20 bg-white/60 p-4 text-xs text-ink/60">
+        Hinweis: Dieser Inhalt wurde mit Unterstützung Künstlicher Intelligenz erstellt (Art. 50 Abs. 4 KI-VO).
+      </div>
+
       <hr className="border-accent/20" />
 
       <Link href="/ratgeber" className="inline-block text-sm text-cta hover:underline">
